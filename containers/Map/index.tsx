@@ -1,8 +1,6 @@
 import {View, Text} from "react-native";
-import CarItems from "../../containers/Map";
 
-export default function CarPage() {
-  
+export default function Map() {
   return (
     <View>
       

@@ -1,7 +1,11 @@
 import {StyleSheet} from "react-native";
 
 export const styles = StyleSheet.create({
-  CarPage: {
-    flex: 1,
+  CarItem: {
+    height: 80,
+    backgroundColor: "coral",
+  },
+  title: {
+
   },
 });

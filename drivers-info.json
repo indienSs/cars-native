@@ -1,0 +1,102 @@
+[
+    {
+        "auto": "ford",
+        "category": "Грузовой",
+        "driver": "Алексей",
+        "phone": "89010032211",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "man",
+        "category": "Грузовой",
+        "driver": "Андрей",
+        "phone": "89500772211",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "daewoo",
+        "category": "Пассажирский",
+        "driver": "Руслан",
+        "phone": "89019870923",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "toyota",
+        "category": "Грузовой",
+        "driver": "Антон",
+        "phone": "89016738205",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "toyota",
+        "category": "Пассажирский",
+        "driver": "Иван",
+        "phone": "89019037201",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "tesla",
+        "category": "Спецтрансопрт",
+        "driver": "Олег",
+        "phone": "89016730954",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "nissan",
+        "category": "Спецтрансопрт",
+        "driver": "Семен",
+        "phone": "89018917528",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "nissan",
+        "category": "Грузовой",
+        "driver": "Константин",
+        "phone": "89014586285",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "honda",
+        "category": "Пассажирский",
+        "driver": "Даниил",
+        "phone": "89011672943",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    },
+    {
+        "auto": "honda",
+        "category": "Спецтрансопрт",
+        "driver": "Сергей",
+        "phone": "89011638526",
+        "position": {
+            "latitude": 0,
+            "longitude": 0
+        }
+    }
+]
