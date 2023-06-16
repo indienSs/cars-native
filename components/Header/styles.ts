@@ -15,4 +15,8 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 24,
   },
+  image: {
+    height: 50,
+    width: 50,
+  }
 });

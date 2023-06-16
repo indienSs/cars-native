@@ -7,12 +7,15 @@ interface ICarItems {
 }
 
 export default function CarItems({carInfo}: ICarItems) {
+
+  const renderCarItem = ({item}: {item: CarInfoType}) => <CarItem carInfo={item} />
+
   return (
     <View>
       <FlatList
         data={carInfo}
-        renderItem={({item}) => <CarItem carInfo={item} />}
-        keyExtractor={car => car.position.longitude}
+        renderItem={renderCarItem}
+        keyExtractor={car => String(car.position.longitude + car.position.latitude)}
       />
     </View>
   );

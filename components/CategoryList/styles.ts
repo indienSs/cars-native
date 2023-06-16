@@ -2,7 +2,6 @@ import {StyleSheet} from "react-native";
 
 export const styles = StyleSheet.create({
   CategoryList: {
-    marginTop: 20,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
