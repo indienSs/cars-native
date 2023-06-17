@@ -51,7 +51,7 @@
     },
     {
         "auto": "tesla",
-        "category": "Спецтрансопрт",
+        "category": "Спецтранспорт",
         "driver": "Олег",
         "phone": "89016730954",
         "position": {
@@ -61,7 +61,7 @@
     },
     {
         "auto": "nissan",
-        "category": "Спецтрансопрт",
+        "category": "Спецтранспорт",
         "driver": "Семен",
         "phone": "89018917528",
         "position": {
@@ -91,7 +91,7 @@
     },
     {
         "auto": "honda",
-        "category": "Спецтрансопрт",
+        "category": "Спецтранспорт",
         "driver": "Сергей",
         "phone": "89011638526",
         "position": {

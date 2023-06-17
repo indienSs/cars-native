@@ -8,9 +8,12 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: "coral",
     marginTop: 15,
-    padding: 10
+    padding: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-  title: {
-
+  carInfo: {
+    textAlign: "right"
   },
 });

@@ -12,13 +12,13 @@ export default function CarItems({carInfo}: ICarItems) {
   const renderCarItem = ({item}: {item: CarInfoType}) => <CarItem carInfo={item} />
 
   return (
-    // <FlexLayout>
+    <FlexLayout>
       <FlatList
         data={carInfo}
         renderItem={renderCarItem}
         keyExtractor={car => String(car.position.longitude + car.position.latitude)}
       />
-    // </FlexLayout>
+    </FlexLayout>
   );
 }
 
