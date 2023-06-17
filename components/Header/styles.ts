@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     fontSize: 24,
   },
   image: {
-    height: 50,
-    width: 50,
+    height: 25,
+    width: 25,
   }
 });

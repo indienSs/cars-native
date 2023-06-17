@@ -1,19 +1,18 @@
-import {useEffect, useState} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, View} from "react-native";
 import Header from "./components/Header";
 import CarsList from "./pages/CarsList";
+import {store} from "./redux/store";
+import {Provider} from "react-redux";
 
 export default function App() {
 
-  useEffect(() => {
-    
-  }, [])
-
   return (
-    <View style={styles.container}>
-      <Header />
-      <CarsList />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <Header />
+        <CarsList />
+      </View>
+    </Provider>
   );
 }
 
