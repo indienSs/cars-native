@@ -1,3 +1,4 @@
+import {ReactNode} from "react";
 import MapView, {PROVIDER_GOOGLE} from "react-native-maps";
 import FlexLayout from "../../layouts/FlexLayut";
 
@@ -8,10 +9,12 @@ const INITIAL_POSITION = {
   longitudeDelta: 0.0421,
 };
 
-export default function Map() {
+export default function Map(children?: any) {
   return (
     <FlexLayout>
-      <MapView provider={PROVIDER_GOOGLE} initialRegion={INITIAL_POSITION} />
+      <MapView provider={PROVIDER_GOOGLE} initialRegion={INITIAL_POSITION}>
+        {children}
+      </MapView>
     </FlexLayout>
   );
 }

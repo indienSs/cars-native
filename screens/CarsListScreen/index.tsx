@@ -11,7 +11,6 @@ interface ICarsListScreen {
 }
 
 export default function CarsListScreen({navigation}: ICarsListScreen) {
-  
   const categories = ["Все", "Пассажирский", "Грузовой", "Спецтранспорт"];
   const [chosenCategory, setChosenCategory] = useState(categories[0]);
   const [cars, setCars] = useState(carsInfo);
@@ -26,9 +25,9 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
     }, []),
     //Функция для открытия и закрытия карты
     onOpenMap: useCallback(() => {
-      setMapOpened(prev => !prev)
-    }, [])
-  }
+      setMapOpened(prev => !prev);
+    }, []),
+  };
 
   if (chosenCategory !== "Все" && !changed) {
     setCars(carsInfo.filter(car => car.category === chosenCategory));
@@ -42,13 +41,17 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
 
   return (
     <PageLayout>
-      <MapIcon onPressHandler={callbacks.onOpenMap}/>
-      {mapOpened ? <Map /> : 
+      <MapIcon onPressHandler={callbacks.onOpenMap} />
+      {mapOpened ? (
+        <Map>
+          <Markers carsInfo={carsInfo} />
+        </Map>
+      ) : (
         <>
           <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callbacks.onChoseCategory} />
           <CarItems carsInfo={cars} navigation={navigation} />
         </>
-      }
+      )}
     </PageLayout>
   );
 }
