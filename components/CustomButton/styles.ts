@@ -5,5 +5,11 @@ export const styles = StyleSheet.create({
     height: 50,
     width: 100,
     backgroundColor: "coral",
+    borderRadius: 5,
+    justifyContent: "center",
   },
+  text: {
+    textAlign: "center",
+    color: "white",
+  }
 });

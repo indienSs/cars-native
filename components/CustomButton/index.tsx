@@ -9,7 +9,7 @@ interface ICustomButton {
 export default function CustomButton(props: ICustomButton) {
   return (
     <TouchableOpacity style={styles.CustomButton}>
-      <Text>{props.text}</Text>
+      <Text style={styles.text}>{props.text}</Text>
     </TouchableOpacity>
   );
 }

@@ -1,5 +1,5 @@
 export type CarInfoType = {
-    auto: string,
+    id: number,
     category: string,
     driver: string,
     phone: string | number,
