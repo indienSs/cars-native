@@ -4,6 +4,7 @@ import CarItems from "../../containers/CarItems";
 import PageLayout from "../../layouts/PageLayout";
 import carsInfo from "../../drivers-info.json";
 import Map from "../../containers/Map";
+import MapIcon from "../../components/MapIcon";
 
 interface ICarsListScreen {
   navigation: any;
@@ -17,7 +18,7 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
   const [changed, setChanged] = useState(false);
   const [mapOpened, setMapOpened] = useState(false);
 
-  const callBacks = {
+  const callbacks = {
     //Функция для выбора категории
     onChoseCategory: useCallback((category: string) => {
       setChosenCategory(category);
@@ -41,9 +42,10 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
 
   return (
     <PageLayout>
+      <MapIcon onPressHandler={callbacks.onOpenMap}/>
       {mapOpened ? <Map /> : 
         <>
-          <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callBacks.onChoseCategory} />
+          <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callbacks.onChoseCategory} />
           <CarItems carsInfo={cars} navigation={navigation} />
         </>
       }
