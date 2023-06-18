@@ -2,6 +2,8 @@ import {View, Text} from "react-native";
 import {styles} from "./styles";
 import {CarInfoType} from "../../types/CarInfoType";
 import CustomButton from "../CustomButton";
+import {sendWhatsAppMsg} from "../../utils/sendWhatsAppMsg";
+import {makePhoneCall} from "../../utils/makePhoneCall";
 
 interface ICarItem {
   carInfo: CarInfoType,
@@ -9,9 +11,13 @@ interface ICarItem {
 
 export default function CarInfo({carInfo}: ICarItem) {
 
-  const onPressCall = () => {}
+  const onPressCall = () => {
+    makePhoneCall(carInfo.phone);
+  }
 
-  const onPressWrite = () => {}
+  const onPressWrite = () => {
+    sendWhatsAppMsg(carInfo.phone);
+  }
 
   return (
       <View style={styles.CarInfo}>

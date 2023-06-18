@@ -5,8 +5,8 @@
         "driver": "Алексей",
         "phone": "89010032211",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.53642181056435, 
+            "longitude": 103.88014631510151
         }
     },
     {
@@ -15,8 +15,8 @@
         "driver": "Андрей",
         "phone": "89500772211",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.53865121518317, 
+            "longitude": 103.87845403754879
         }
     },
     {
@@ -25,8 +25,8 @@
         "driver": "Руслан",
         "phone": "89019870923",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.53959145303348, 
+            "longitude": 103.88391010413366
         }
     },
     {
@@ -35,8 +35,8 @@
         "driver": "Антон",
         "phone": "89016738205",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.54031044486148, 
+            "longitude": 103.88727467852767
         }
     },
     {
@@ -45,8 +45,8 @@
         "driver": "Иван",
         "phone": "89019037201",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.52792001594138, 
+            "longitude": 103.88518318633682
         }
     },
     {
@@ -55,8 +55,8 @@
         "driver": "Олег",
         "phone": "89016730954",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.530077529493745, 
+            "longitude": 103.89027551514937
         }
     },
     {
@@ -65,8 +65,8 @@
         "driver": "Семен",
         "phone": "89018917528",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.537932196181174, 
+            "longitude": 103.89263981066946
         }
     },
     {
@@ -75,8 +75,8 @@
         "driver": "Константин",
         "phone": "89014586285",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.54235674176798, 
+            "longitude": 103.87572600425634
         }
     },
     {
@@ -85,8 +85,8 @@
         "driver": "Даниил",
         "phone": "89011672943",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.544900653561804, 
+            "longitude": 103.88100020195506
         }
     },
     {
@@ -95,8 +95,8 @@
         "driver": "Сергей",
         "phone": "89011638526",
         "position": {
-            "latitude": 0,
-            "longitude": 0
+            "latitude": 52.544955954354755, 
+            "longitude": 103.8880930885154
         }
     }
 ]
