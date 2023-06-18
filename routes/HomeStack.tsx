@@ -11,7 +11,6 @@ export default function HomeStack() {
       <Stack.Navigator>
         <Stack.Screen name="CarsListScreen" component={CarsListScreen} options={{title: "Экран списка ТС"}} />
         <Stack.Screen name="CarScreen" component={CarScreen} options={{title: "Экран ТС"}} />
-        {/* <Stack.Screen name="Map" component={MapScreen} options={{title: "Карта"}} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,7 +1,6 @@
 import {View, Text, TouchableOpacity} from "react-native";
 import {styles} from "./styles";
 import {CarInfoType} from "../../types/CarInfoType";
-import {NativeStackNavigationProp} from "@react-navigation/native-stack";
 
 interface ICarItem {
   carInfo: CarInfoType,
