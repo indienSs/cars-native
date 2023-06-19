@@ -4,7 +4,7 @@ export const english = [
   "Truck",
   "Special",
   "Main",
-  "Setting",
+  "Settings",
   "Language",
   "Information",
   "Call",

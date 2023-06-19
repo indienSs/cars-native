@@ -7,12 +7,12 @@ interface ICategories {
   onChoseCategory: (category: string) => void;
 }
 
-export default function CategoryList(props: ICategories) {
+export default function CategoryList({categories, chosen, onChoseCategory}: ICategories) {
   return (
     <View style={styles.CategoryList}>
-      {props.categories.map(category => (
-        <TouchableOpacity onPress={() => props.onChoseCategory(category)} key={category}>
-          <Text style={category === props.chosen ? styles.chosen : styles.category}>
+      {categories.map(category => (
+        <TouchableOpacity onPress={() => onChoseCategory(category)} key={category}>
+          <Text style={category === chosen ? styles.chosen : styles.category}>
             {category}
           </Text>
         </TouchableOpacity>

@@ -14,7 +14,7 @@ interface ICarItem {
 
 export default function CarInfo({carInfo, translate, language}: ICarItem) {
   const callbacks = {
-    //Коллбэк для вызова
+    //Коллбэк для вызова по номеру телефона
     onPressCall: useCallback(() => {
       makePhoneCall(carInfo.phone);
     }, [carInfo.phone]),
@@ -26,7 +26,7 @@ export default function CarInfo({carInfo, translate, language}: ICarItem) {
 
   return (
     <View style={styles.CarInfo}>
-      <Text>Категория: {carInfo.category}</Text>
+      <Text>{translate("Категория", language)}: {carInfo.category}</Text>
       <Text>{carInfo.driver}</Text>
       <Text>{carInfo.phone}</Text>
       <View style={styles.buttons}>

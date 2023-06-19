@@ -20,28 +20,26 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
   const cars = useSelector(selectCars);
   const language = useSelector(selectLanguage);
 
-  const categories = [
-    translate("Все", "RU"),
-    translate("Пассажирский", "RU"),
-    translate("Грузовой", "RU"),
-    translate("Спецтранспорт", "RU"),
-  ];
-  const [changed, setChanged] = useState(false);
   const [mapOpened, setMapOpened] = useState(false);
+  const categories = [
+    translate("Все", language),
+    translate("Пассажирский", language),
+    translate("Грузовой", language),
+    translate("Спецтранспорт", language),
+  ];
   const chosenCars =
-    chosenCategory === translate("Все", "RU")
+    chosenCategory === translate("Все", language)
       ? cars
       : cars.filter(car => car.category === translate(chosenCategory, "RU"));
 
   useEffect(() => {
     dispatch(setCars(carsInfo));
-  }, []);
+  }, [language]);
 
   const callbacks = {
     //Функция для выбора категории
     onChoseCategory: useCallback((category: string) => {
       dispatch(setCategory(category));
-      setChanged(false);
     }, []),
     //Функция для открытия и закрытия карты
     onOpenMap: useCallback(() => {
@@ -57,7 +55,7 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
       ) : (
         <PageLayout>
           <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callbacks.onChoseCategory} />
-          <CarItems carsInfo={chosenCars} navigation={navigation} />
+          <CarItems carsInfo={chosenCars} navigation={navigation} language={language} translate={translate} />
         </PageLayout>
       )}
     </>

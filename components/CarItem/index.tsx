@@ -4,11 +4,13 @@ import {styles} from "./styles";
 import {CarInfoType} from "../../types/CarInfoType";
 
 interface ICarItem {
-  carInfo: CarInfoType;
-  navigation: any;
+  carInfo: CarInfoType,
+  navigation: any,
+  language: string,
+  translate: (word: string, lang: string) => string,
 }
 
-export default function CarItem({carInfo, navigation}: ICarItem) {
+export default function CarItem({carInfo, navigation, translate, language}: ICarItem) {
   
   const callbacks = {
     //Переход на экран просмотра информации об авто
@@ -25,7 +27,7 @@ export default function CarItem({carInfo, navigation}: ICarItem) {
           <Text>{carInfo.driver}</Text>
         </View>
         <View>
-          <Text style={styles.carInfo}>{carInfo.category}</Text>
+          <Text style={styles.carInfo}>{translate(carInfo.category, language)}</Text>
         </View>
       </View>
     </TouchableOpacity>
