@@ -6,8 +6,9 @@ import carsInfo from "../../drivers-info.json";
 import Map from "../../containers/Map";
 import MapIcon from "../../components/MapIcon";
 import {useSelector} from "react-redux";
-import {selectCars, selectCategory, setCategory, setCars} from "../../redux/reducers/appReducer";
+import {selectCars, selectCategory, setCategory, setCars, selectLanguage} from "../../redux/reducers/appReducer";
 import {useDispatch} from "react-redux";
+import {translate} from "../../utils/translations/translate";
 
 interface ICarsListScreen {
   navigation: any;
@@ -17,11 +18,20 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
   const dispatch = useDispatch();
   const chosenCategory = useSelector(selectCategory);
   const cars = useSelector(selectCars);
+  const language = useSelector(selectLanguage);
 
-  const categories = ["Все", "Пассажирский", "Грузовой", "Спецтранспорт"];
+  const categories = [
+    translate("Все", "RU"),
+    translate("Пассажирский", "RU"),
+    translate("Грузовой", "RU"),
+    translate("Спецтранспорт", "RU"),
+  ];
   const [changed, setChanged] = useState(false);
   const [mapOpened, setMapOpened] = useState(false);
-  const chosenCars = chosenCategory === "Все" ? cars : cars.filter(car => car.category === chosenCategory);
+  const chosenCars =
+    chosenCategory === translate("Все", "RU")
+      ? cars
+      : cars.filter(car => car.category === translate(chosenCategory, "RU"));
 
   useEffect(() => {
     dispatch(setCars(carsInfo));

@@ -11,7 +11,7 @@ type AppStoreType = {
 const initialState: AppStoreType = {
   cars: [],
   category: "Все",
-  language: "ru",
+  language: "RU",
 };
 
 export const appSlice = createSlice({
@@ -24,13 +24,13 @@ export const appSlice = createSlice({
     setCategory: (state, action: PayloadAction<string>) => {
       state.category = action.payload;
     },
-    setLanguage: (state, action: PayloadAction<string>) => {
-      state.language = action.payload;
+    changeLanguage: (state) => {
+      state.language = state.language === "RU" ? "EN" : "RU";
     },
   },
 });
 
-export const {setCars, setCategory, setLanguage} = appSlice.actions;
+export const {setCars, setCategory, changeLanguage} = appSlice.actions;
 
 export const selectCars = (state: RootState) => state.app.cars;
 export const selectCategory = (state: RootState) => state.app.category;
