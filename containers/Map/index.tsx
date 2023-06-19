@@ -14,10 +14,12 @@ const INITIAL_POSITION = {
 };
 
 interface IMap {
-  carItems: CarInfoType[];
+  carItems: CarInfoType[],
+  navigation: any,
+  tappableMarker: boolean,
 }
 
-export default function Map({carItems}: IMap) {
+export default function Map({carItems, navigation, tappableMarker = false}: IMap) {
   //выбор иконки для отображения на карте
   const choseIcon = (car: CarInfoType) => {
     switch (car.category) {
@@ -32,6 +34,11 @@ export default function Map({carItems}: IMap) {
     }
   };
 
+  //Переход на экран просмотра информации об авто
+  const pressHandler =(car: CarInfoType) => {
+    navigation.navigate("CarScreen", car);
+  };
+
   const callbacks = {
     //Рендер всех маркеров машин из списка на карте
     renderMarkers: useCallback(() => {
@@ -40,6 +47,8 @@ export default function Map({carItems}: IMap) {
           key={String(car.position.latitude + car.position.longitude)}
           coordinate={{latitude: car.position.latitude, longitude: car.position.longitude}}
           image={choseIcon(car)}
+          tappable={tappableMarker}
+          onPress={() => pressHandler(car)}
         />
       ));
     }, [carItems]),

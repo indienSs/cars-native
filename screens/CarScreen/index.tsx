@@ -13,7 +13,7 @@ export default function CarScreen({route}: ICarScreen) {
   return (
     <PageLayout>
       <CarInfo carInfo={carInfo} />
-      <Map carItems={Array(carInfo)}/>
+      <Map carItems={Array(carInfo)} tappableMarker={false}/>
     </PageLayout>
   );
 }
