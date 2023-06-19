@@ -1,4 +1,4 @@
-import {View, FlatList} from "react-native";
+import {FlatList} from "react-native";
 import CarItem from "../../components/CarItem";
 import {CarInfoType} from "../../types/CarInfoType";
 import FlexLayout from "../../layouts/FlexLayut";
