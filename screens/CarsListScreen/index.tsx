@@ -43,7 +43,7 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
   return (
     <PageLayout>
       <MapIcon onPressHandler={callbacks.onOpenMap}/>
-      {mapOpened ? <Map /> : 
+      {mapOpened ? <Map carItems={cars} /> : 
         <>
           <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callbacks.onChoseCategory} />
           <CarItems carsInfo={cars} navigation={navigation} />

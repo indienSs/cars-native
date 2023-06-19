@@ -3,8 +3,9 @@ import {StyleSheet} from "react-native";
 export const styles = StyleSheet.create({
   MapIcon: {
     position: "absolute",
-    top: 45,
+    top: 50,
     right: 20,
+    zIndex: 999,
   },
   image: {
     width: 30,

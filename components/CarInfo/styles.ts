@@ -7,5 +7,6 @@ export const styles = StyleSheet.create({
   buttons: {
     flexDirection: "row",
     gap: 20,
+    marginBottom: 20,
   }
 });
