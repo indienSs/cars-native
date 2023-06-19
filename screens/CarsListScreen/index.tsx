@@ -21,6 +21,7 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
   const categories = ["Все", "Пассажирский", "Грузовой", "Спецтранспорт"];
   const [changed, setChanged] = useState(false);
   const [mapOpened, setMapOpened] = useState(false);
+  const chosenCars = chosenCategory === "Все" ? cars : cars.filter(car => car.category === chosenCategory);
 
   useEffect(() => {
     dispatch(setCars(carsInfo));
@@ -38,25 +39,15 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
     }, []),
   };
 
-  if (chosenCategory !== "Все" && !changed) {
-    dispatch(setCars(carsInfo.filter(car => car.category === chosenCategory)));
-    setChanged(true);
-  }
-
-  if (chosenCategory === "Все" && !changed) {
-    dispatch(setCars(carsInfo));
-    setChanged(true);
-  }
-
   return (
     <>
       <MapIcon onPressHandler={callbacks.onOpenMap} />
       {mapOpened ? (
-        <Map carItems={cars} navigation={navigation} tappableMarker={true} />
+        <Map carItems={chosenCars} navigation={navigation} tappableMarker={true} />
       ) : (
         <PageLayout>
           <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callbacks.onChoseCategory} />
-          <CarItems carsInfo={cars} navigation={navigation} />
+          <CarItems carsInfo={chosenCars} navigation={navigation} />
         </PageLayout>
       )}
     </>
