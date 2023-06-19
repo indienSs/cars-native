@@ -15,7 +15,7 @@ const INITIAL_POSITION = {
 
 interface IMap {
   carItems: CarInfoType[],
-  navigation: any,
+  navigation?: any,
   tappableMarker: boolean,
 }
 
