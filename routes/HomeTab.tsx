@@ -8,7 +8,7 @@ export default function HomeTab() {
   return (
       <Tab.Navigator >
         <Tab.Screen name="Главная" component={HomeStack} options={{headerShown: false}}/>
-        <Tab.Screen name="Настройки" component={SettingsScreen} />
+        <Tab.Screen name="Настройки" component={HomeStack} />
       </Tab.Navigator>
   );
 }
