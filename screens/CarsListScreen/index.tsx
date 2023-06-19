@@ -34,7 +34,7 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
 
   useEffect(() => {
     dispatch(setCars(carsInfo));
-  }, [language]);
+  }, [chosenCategory]);
 
   const callbacks = {
     //Функция для выбора категории
