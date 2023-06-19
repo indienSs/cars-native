@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 20,
-    marginBottom: 40,
+    marginBottom: 20,
   },
   chosen: {
     color: "red",

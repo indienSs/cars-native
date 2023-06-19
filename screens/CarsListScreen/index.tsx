@@ -5,16 +5,15 @@ import PageLayout from "../../layouts/PageLayout";
 import carsInfo from "../../drivers-info.json";
 import Map from "../../containers/Map";
 import MapIcon from "../../components/MapIcon";
-import { useSelector } from "react-redux";
-import { selectCars, selectCategory, setCategory, setCars } from "../../redux/reducers/appReducer";
-import { useDispatch } from "react-redux";
+import {useSelector} from "react-redux";
+import {selectCars, selectCategory, setCategory, setCars} from "../../redux/reducers/appReducer";
+import {useDispatch} from "react-redux";
 
 interface ICarsListScreen {
   navigation: any;
 }
 
 export default function CarsListScreen({navigation}: ICarsListScreen) {
-  
   const dispatch = useDispatch();
   const chosenCategory = useSelector(selectCategory);
   const cars = useSelector(selectCars);
@@ -25,7 +24,7 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
 
   useEffect(() => {
     dispatch(setCars(carsInfo));
-  }, [])
+  }, []);
 
   const callbacks = {
     //Функция для выбора категории
@@ -35,9 +34,9 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
     }, []),
     //Функция для открытия и закрытия карты
     onOpenMap: useCallback(() => {
-      setMapOpened(prev => !prev)
-    }, [])
-  }
+      setMapOpened(prev => !prev);
+    }, []),
+  };
 
   if (chosenCategory !== "Все" && !changed) {
     dispatch(setCars(carsInfo.filter(car => car.category === chosenCategory)));
@@ -50,14 +49,16 @@ export default function CarsListScreen({navigation}: ICarsListScreen) {
   }
 
   return (
-    <PageLayout>
-      <MapIcon onPressHandler={callbacks.onOpenMap}/>
-      {mapOpened ? <Map carItems={cars} navigation={navigation} tappableMarker={true}/> : 
-        <>
+    <>
+      <MapIcon onPressHandler={callbacks.onOpenMap} />
+      {mapOpened ? (
+        <Map carItems={cars} navigation={navigation} tappableMarker={true} />
+      ) : (
+        <PageLayout>
           <CategoryList categories={categories} chosen={chosenCategory} onChoseCategory={callbacks.onChoseCategory} />
           <CarItems carsInfo={cars} navigation={navigation} />
-        </>
-      }
-    </PageLayout>
+        </PageLayout>
+      )}
+    </>
   );
 }

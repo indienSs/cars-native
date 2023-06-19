@@ -1,4 +1,5 @@
-import {Text} from "react-native";
+import {Text, TouchableOpacity} from "react-native";
+import {styles} from "./styles";
 import ItemLayout from "../../layouts/ItemLayout";
 
 interface ICustomButton {
@@ -9,8 +10,10 @@ interface ICustomButton {
 export default function LanguageSetter({onPressHandler, language}: ICustomButton) {
   return (
     <ItemLayout>
-        <Text>Язык:</Text>
-        <Text>{language}</Text>
+        <Text style={styles.text}>Язык:</Text>
+        <TouchableOpacity>
+          <Text style={styles.text}>{language}</Text>
+        </TouchableOpacity>
     </ItemLayout>
   );
 }
